@@ -234,15 +234,15 @@ XYZ_grid(1,:) = 0:10:(size_map*10); % adds array of 1500 in x
 XYZ_grid(:,1) = 0:10:(size_map*10); % and y to XYZ_grid
 XYZ_grid(2:(size_map+1),2:(size_map+1)) = full_map; % data populated from the second row and second column of XYZ_grid
 XYZ_grid = round(XYZ_grid*1000)/1000;% rounds z values to 0.001 um (z = 1nm resolution) 
-DesignMLA = XYZ_grid;
+MLA_design = XYZ_grid;
 
 figure(10)
-visible_data = DesignMLA(2:end, 2:end);
+visible_data = MLA_design(2:end, 2:end);
 imagesc(visible_data)
 title('Powerphotonics - MLA Design')
 cbar = colorbar; cbar.Label.String = 'Z height (um)'; 
 caxis([min((visible_data(:))), max((visible_data(:)))]);
 
-writematrix(DesignMLA, [resultdir '\MLADesign.csv'])
-writematrix(DesignMLA, [resultdir '\MLADesign.dat'])
+writematrix(MLA_design, [resultdir '\MLADesign.csv'])
+writematrix(MLA_design, [resultdir '\MLADesign.dat'])
 copyfile("MLA_Design_SGD.m", [resultdir '\script.txt']);
