@@ -10,6 +10,9 @@ A MATLAB script to help fabricate a microlens array with PowerPhotonic.
 - Compatibility with the LightForge system from PowerPhotonic.
 - Flexible design parameters for different fabrication requirements.
 
+## Known issues
+- When producing the full 15x15 layout (lines 213--216) the tiling must be changed to accomodate different size BFPs. 
+
 ## Requirements
 - MATLAB (version 2022b or later)
 
