@@ -9,6 +9,7 @@ A MATLAB script to help fabricate a microlens array with PowerPhotonic.
 - Generate four distinct MLA patterns based on optical configurations.
 - Compatibility with the LightForge system from PowerPhotonic.
 - Flexible design parameters for different fabrication requirements.
+- Packaged with MicrolensRelayCalculator.xlsx to help design your MLA. 
 
 ## Known issues
 - When producing the full 15x15 layout (lines 213--216) the tiling must be changed to accomodate different size BFPs. 
